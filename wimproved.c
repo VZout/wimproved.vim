@@ -210,7 +210,7 @@ static int set_window_style(int is_clean_enabled, int arg)
 
         unclean_child_wr = child_wr;
         EXPECT(AdjustWindowRectEx(&unclean_child_wr, style, FALSE,
-                                  ex_style | WS_EX_CLIENTEDGE));
+                                  ex_style));
 
         delta_x = ((unclean_child_wr.right - unclean_child_wr.left) - w) / 2;
         delta_y = ((unclean_child_wr.bottom - unclean_child_wr.top) - h) / 2;
